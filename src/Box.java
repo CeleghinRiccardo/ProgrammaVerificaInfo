@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Box {
     public Scanner sc = new Scanner(System.in);
     private String tipoCont, nome;
-    private int spazio;
+    private int spazio=0;
+
+    private Oggetto[] ListaOgg= new Oggetto[spazio];
 
 
 
@@ -37,9 +39,13 @@ public class Box {
         this.tipoCont = tipoCont;
     }
 
-    public void scegliSpazio(){
+    public int scegliSpazio(){
         System.out.println("quanto vuoi fare grandi i box?");
         this.spazio=sc.nextInt();
+        return spazio;
     }
+
+
+
 
 }
